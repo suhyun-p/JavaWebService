@@ -41,4 +41,28 @@ public class SchoolService {
             System.out.println(s.getUserName() + "," + s.getSchool().getName());
         }
     }
+
+    @Transactional
+    public void findSchoolInfo() {
+        School sc1 = new School("예체능고");
+        sc1.registerStudent(new Student("홍길동"));
+        sc1.registerStudent(new Student("유재석"));
+
+        School sc2 = new School("매력고");
+        sc2.registerStudent(new Student("나라"));
+        sc2.registerStudent(new Student("민하"));
+
+        schoolRepository.save(sc1);
+        schoolRepository.save(sc2);
+        /*schoolRepository.save(new HashSet<School>() {{
+            add(sc1);
+            add(sc2);
+        }});*/
+
+        List<School> schools = schoolRepository.findAll();
+
+        for (School s : schools) {
+            System.out.println(s.toString());
+        }
+    }
 }

@@ -25,9 +25,17 @@ public class DemoApplication {
 		*/
 
 		// Many To One
+		/*
 		ConfigurableApplicationContext context = SpringApplication.run(DemoApplication.class, args);
 		SchoolService schoolService = context.getBean(SchoolService.class);
 
 		schoolService.findStudentInfo();
+		*/
+
+		// One to Many
+		ConfigurableApplicationContext context = SpringApplication.run(DemoApplication.class, args);
+		SchoolService schoolService = context.getBean(SchoolService.class);
+		schoolService.findSchoolInfo();
+
 	}
 }
