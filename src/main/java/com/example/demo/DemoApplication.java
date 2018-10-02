@@ -12,7 +12,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		// SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(DemoApplication.class, args);
 
 		// JPA MAIN
 		/*
@@ -33,9 +33,10 @@ public class DemoApplication {
 		*/
 
 		// One to Many
+		/*
 		ConfigurableApplicationContext context = SpringApplication.run(DemoApplication.class, args);
 		SchoolService schoolService = context.getBean(SchoolService.class);
 		schoolService.findSchoolInfo();
-
+		*/
 	}
 }
