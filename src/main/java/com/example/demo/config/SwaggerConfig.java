@@ -35,6 +35,7 @@ public class SwaggerConfig {
                 .select()
                 .apis(RequestHandlerSelectors.any())
                 .paths(regex("/basic/.*"))
+                // .paths(regex("/myBatis/.*"))
                 .build()
                 .apiInfo(metadata());
     }

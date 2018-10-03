@@ -1,4 +1,6 @@
 spring:
+  datasource:
+    platform: h2db
   h2:
     console:
       enabled: true

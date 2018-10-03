@@ -11,16 +11,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
-    @Autowired
-    MemberMapper memberMapper;
+    /*@Autowired
+    MemberMapper memberMapper;*/
 
     @RequestMapping("/")
     public String hello() {
         return "hello";
     }
 
-    @GetMapping("/members/{no}")
+    /*@GetMapping("/members/{no}")
     public Member helloWorld(@PathVariable("no") long no) {
         return memberMapper.selectMember2(no);
-    }
+    }*/
 }
